@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Mengatur judul pada tab browser -->
+    <title>Data Mahasiswa</title>
+    <!-- Mengatur tampilan halaman menggunakan css -->
+    <style>
+    /* Mengatur jenis huruf, warna latar belakang, jarak tepi, dan warna teks pada halaman */
+    body{
+        font-family: Arial; 
+        background-color: #f9f4f4; 
+        padding: 20px; 
+        color: #333; }
+    /* Mengatur warna, posisi, dan jarak bawah judul */
+    h1 { 
+        color: #1a56b0; 
+        text-align: center; 
+        margin-bottom: 30px; }
+    /* Mengatur tampilan formulir dengan latar putih, jarak dalam, garis tepi, dan jarak bawah */
+    form {
+        background-color: white; 
+        padding: 15px; 
+        border: 1px solid #ccd; 
+        margin-bottom: 20px; }
+    /* Memberikan jarak pada input, select, textarea */
+    input, select, textarea {
+        margin: 5px; }
+    /* Mengatur warna, tulisan, ukuran, garis tepi, dan bentuk kursor pada tombol */
+    button {
+        background-color: #1a56b0; 
+        color: white; 
+        padding: 8px 15px; 
+        border: none; 
+        cursor: pointer; }
+    /* Menggabungkan garis tabel dan membuat tabel memenuhi lebar halaman */
+    table { 
+        border-collapse: collapse; 
+        width: 100%; }
+    /* Mengatur warna latar, warna teks, dan jarak dalam pada judul kolom tabel */
+    th { 
+        background: #1a56b0; 
+        color: white; 
+        padding: 6px; }
+    /* Memberikan garis tepi dan jarak dalam pada sel tabel */
+    td { 
+        border: 1px solid #ccd; 
+        padding: 6px; }
+    /* Memberikan warna latar biru muda pada elemen class aktif */
+    .aktif { 
+        background: #e6eefb; }
+    /* Mengatur tampilan judul halaman */
+    .judul-halaman {}
+    /* Memberikan warna latar biru muda pada elemen class ganjil */
+    .ganjil {
+        background-color: #e6eefb; }
+    /* Mengatur ukuran tulisan pada judul */
+     #judul { 
+        font-size: 24px; }
+    </style>
+</head>
+<body>
+    <!--- 
+    NIM : 252520023
+    Nama : Arini Tria Melani
+    Kelas : A/3
+    -->
+
+    <!-- Menampilkan judul utama halaman -->
+    <h1>Data Mahasiswa</h1>
+    <!-- Membuat formulir mahasiswa -->
+    <form action="proses.php" method="post">     
+    <!-- Input untuk memasukkan nama mahasiswa -->
+    Nama: <input type="text" name="nama"><br>
+    <!-- Input untuk memasukkan alamat email -->
+    Email: <input type="email" name="email"><br>
+    <!-- Pilih jenis kelamin -->
+    Jenis Kelamin:
+    <input type="radio" name="jk" value="L"> Laki-laki
+    <input type="radio" name="jk" value="P"> Perempuan<br>
+    <!-- Pilih hobi -->
+    Hobi:
+    <input type="checkbox" name="hobi" value="baca"> Membaca
+    <input type="checkbox" name="hobi" value="lari"> Berlari
+    <input type="checkbox" name="hobi" value="masak"> Memasak<br>
+    <!-- Pilih Jurusan -->
+    Jurusan:
+    <select name="jurusan">
+        <option>Desain Komunikasi Visual</option>
+        <option>Kedokteran</option>
+        <option>Sastra Jepang</option>
+        <option>Teknik Pertambangan</option>
+        <option>Teknologi Informasi</option>
+    </select><br>
+    <!-- Pilih alamat -->
+    Alamat: <br> <textarea name="alamat" rows="3"></textarea><br>
+    <!-- Tombol untuk mengirim data -->
+    <button type="submit">Kirim</button>
+    <!-- Tombol untuk mengosongkan isi formulir -->
+    <button type="reset">Reset</button>
+    </form>
+    <br>
+    <!-- Membuat tabel -->
+    <table border="1">
+    <!-- Memberikan judul pada tabel -->
+    <caption>Data Mahasiswa</caption>
+    <!-- Membuat satu baris tabel -->
+    <tr>
+    <!-- Membuat sel judul kolom tabel -->
+        <th>NIM</th>
+        <th>Nama</th>
+        <th>Prodi</th>
+        <th>IPK</th>
+    </tr>
+    <!-- Memberikan warna latar pada baris ganjil -->
+    <tr class="ganjil">
+    <!-- Membuat sel yang berisi data tabel -->
+        <td>252520023</td>
+        <td>Arini Tria Melani</td>
+        <td>Teknologi Informasi</td>
+        <td>3.93</td>
+    </tr>
+    <tr>
+        <td>252520060</td>
+        <td>Malika Alya Dafista</td>
+        <td>Sastra Jepang</td>
+        <td>3.91</td>
+    </tr>
+    <tr class="ganjil">
+        <td>252520074</td>
+        <td>Devi Wiko Astriana</td>
+        <td>Desain Komunikasi Visual</td>
+        <td>3.90</td>
+    </tr>
+    <tr>
+        <td>252520099</td>
+        <td>Retno Palupi</td>
+        <td>Teknik Pertambangan</td>
+        <td>3.92</td>
+    </tr>
+    <tr class="ganjil">
+        <td>252520102</td>
+        <td>Meila Bunga Hendrawan</td>
+        <td>Kedokteran</td>
+        <td>3.94</td>
+    </tr>
+    </table>
+</body>
+</html>
